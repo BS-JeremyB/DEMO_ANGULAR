@@ -1,0 +1,114 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img src="assets/logo.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+            Demo Angular
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" routerLink="home">Home</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="demos" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Démonstration
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/demos/demo01">Demo 01 - One-Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo02">Demo 02 - Two-Way Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo03">Demo 03 - Event Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo04">Demo 04 - Attribute Binding</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo05">Demo 05 - La base du routing</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo06">Demo 06 - Les Pipes</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo07">Demo 07 - Les Custom Pipes</a></li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo08">Demo 08 - La directive de composants</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo09">Demo 09 - La directive structurelles</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo10">Demo 10 - Les Custom Directive</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo11">Demo 11 - Les Input & Output</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo12">Demo 12 - Services et injection de
+                                dépendances</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo13">Demo 13 - Le cycle de vie des
+                                composants</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo14">Demo 14 - Les formulaires
+                                (Validators)</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo15">Demo 15 - Les Custom Validators</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo16">Demo 16 - Le routing</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo17">Demo 17 - Les Guards</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo18">Demo 18 - Les Resolvers</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo19">Demo 19 - Les Storages</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo20">Demo 20 - Les Observables</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo21">Demo 21 - Le HttpClient avec
+                                JSON-Server</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/demos/demo22">Demo 22 - L'interceptor</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" routerLink="exercices" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Exercices
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" routerLink="/exercices/exo01">Exercice 01 - Créer son profil</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo02">Exercice 02 - Complétion du
+                                profil</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo03">Exercice 03 - Le chronomètre
+                                (basique)</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo05">Exercice 05 - Menu complet</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo07">Exercice 07 - Convertisseur de
+                                degré</a></li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo08">Exercice 08 - Générateur de forme</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo09">Exercice 09 - Panier de courses</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo11">Exercice 11 - Shopping List</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo12">Exercice 12 - Shopping List avec
+                                services</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo15">Exercice 15 - Vérification d'âge</a>
+                        </li>
+                        <li><a class="dropdown-item" routerLink="/exercices/exo21">Exercice 21 - Pokedex avec
+                                HttpClient</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">
+                        {{ isConnected ? "Connecté" : "Déconnecté" }}
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page">
+                        {{ isConnectedBehavior ? "Connecté" : "Déconnecté" }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
